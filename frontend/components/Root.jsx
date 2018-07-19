@@ -1,8 +1,10 @@
 import React from 'react';
+import Clock from './clock';
 
 const Root = ({store}) => (
   <div>
-    <h1>It works!</h1>
+    <h1>Some cool widgets!</h1>
+    <Clock />
   </div>
 );
 
