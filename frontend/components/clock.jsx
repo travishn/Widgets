@@ -4,10 +4,23 @@ class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.time = new Date();
+    this.days = {
+      1: 'Monday',
+      2: 'Tuesday',
+      3: 'Wednesday',
+      4: 'Thursday',
+      5: 'Friday',
+      6: 'Saturday',
+      7: 'Sunday'
+    };
+    
     this.state = {
       hours: this.time.getHours(),
       minutes: this.time.getMinutes(),
-      seconds: this.time.getSeconds()
+      seconds: this.time.getSeconds(),
+      day: this.time.getDay(),
+      month: this.time.getMonth(),
+      year: this.time.getFullYear()
     };
 
     this.tick = this.tick.bind(this);
