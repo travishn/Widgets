@@ -202,11 +202,13 @@ h5 {
   font-weight: bold;
   color: white;
   height: 192px;
-  margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: lightblue;
-  background-size: cover; }
+  background-size: cover;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black; }
 
 /*# sourceMappingURL=index.css.map */
