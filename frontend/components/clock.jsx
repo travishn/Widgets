@@ -76,17 +76,20 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div>
+      <section>
         <h2>Clock</h2>
-        <div>
-          <h5>Time: </h5>
-          <p>{this.state.hours}:{this.state.minutes}:{this.state.seconds}</p>
+        <div className="clock-container">
+          <div className="clock">
+            <h5>Time: </h5>
+            <p>{this.state.hours}:{this.state.minutes}:{this.state.seconds}</p>
+          </div>
+
+          <div className="clock">
+            <h5>Date:</h5>
+            <p>{this.days[this.state.day]} {this.months[this.state.month].name}  {this.state.day}, {this.state.year}</p>
+          </div>
         </div>
-        <div>
-          <h5>Date:</h5>
-          <p>{this.days[this.state.day]} {this.months[this.state.month].name}  {this.state.day}, {this.state.year}</p>
-        </div>
-      </div>
+      </section>
     );
   }
 }

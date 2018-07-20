@@ -3,3 +3,5 @@ bundle.js
 bundle.js.map
 package-lock.json
 dist
+.eslintrc.js
+.sass-cache
