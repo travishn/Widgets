@@ -1,3 +1,47 @@
+.tab-wrapper {
+  width: 220px;
+  margin: 0 auto;
+  // border-radius: 10px 10px 0px 0px;
+  background: lightblue;
+}
+
 .tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+}
+
+.tabs h1:first-child {
+  border-left: 2px solid black;
+}
+
+.tabs h1:last-child {
+  border-right: 2px solid black;
+}
+
+.tabs h1 {
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.tabs h1:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+#selected-tab {
+  border-bottom: none;
+}
+
+.tab-content {
+  font-weight: bold;
+  color: white;
+  height: 192px;
+  margin: 0 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  background-size: cover;
 }

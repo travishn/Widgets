@@ -131,8 +131,8 @@ table {
   font-size: 28px;
   color: white;
   font-family: Orbitron;
-  width: 550px;
-  height: 94px;
+  width: 450px;
+  height: 74px;
   border: 2px solid black;
   margin: 0 20px 20px 20px;
   padding: 10px;
@@ -143,7 +143,7 @@ table {
 .clock {
   display: flex;
   justify-content: space-between;
-  padding: 12px 8px 0 8px; }
+  padding: 8px 8px 0 8px; }
 
 #root {
   width: 60%;
@@ -169,5 +169,44 @@ h5 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 1px;
   font-size: 24px; }
+
+.tab-wrapper {
+  width: 220px;
+  margin: 0 auto;
+  background: lightblue; }
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center; }
+
+.tabs h1:first-child {
+  border-left: 2px solid black; }
+
+.tabs h1:last-child {
+  border-right: 2px solid black; }
+
+.tabs h1 {
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black; }
+
+.tabs h1:not(:last-child) {
+  border-right: 2px solid black; }
+
+#selected-tab {
+  border-bottom: none; }
+
+.tab-content {
+  font-weight: bold;
+  color: white;
+  height: 192px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  background-size: cover; }
 
 /*# sourceMappingURL=index.css.map */

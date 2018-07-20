@@ -9,14 +9,18 @@ class Tab extends React.Component {
   }
 
   changeIndex(idx) {
-    this.setState({current_idx: idx});
+    this.setState({ current_idx: idx });
   }
 
   renderTabInfo() {
     const { tabs } = this.props.store;
-    return tabs.map( tabObj => {
+    return tabs.map(tabObj => {
       return (
-        <h1 key={`tab-${tabObj.id}`}onClick={() => this.changeIndex(tabObj.id - 1)} >{tabObj.title}</h1>
+        <h1 id={this.state.current_idx === tabObj.id - 1 ? 'selected-tab' : null}
+          key={`tab-${tabObj.id}`}
+          onClick={() => this.changeIndex(tabObj.id - 1)}>
+          {tabObj.title}
+        </h1>
       );
     });
   }
