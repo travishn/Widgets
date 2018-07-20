@@ -172,8 +172,7 @@ h5 {
 
 .tab-wrapper {
   width: 220px;
-  margin: 0 auto;
-  background: lightblue; }
+  margin: 0 auto; }
 
 .tabs {
   display: grid;
@@ -190,7 +189,9 @@ h5 {
   cursor: pointer;
   text-align: center;
   border-bottom: 2px solid black;
-  border-top: 2px solid black; }
+  border-top: 2px solid black;
+  border-radius: 10px 10px 0px 0px;
+  background: lightblue; }
 
 .tabs h1:not(:last-child) {
   border-right: 2px solid black; }
