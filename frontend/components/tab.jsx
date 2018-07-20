@@ -29,6 +29,7 @@ class Tab extends React.Component {
     const { tabs } = this.props.store;
     return (
       <div className='tab-wrapper'>
+        <h2>Tabs</h2>
         <ul className='tabs'>
           {this.renderTabInfo()}
         </ul>

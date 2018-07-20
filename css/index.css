@@ -173,6 +173,8 @@ h5 {
 .tab-wrapper {
   width: 220px;
   margin: 0 auto; }
+  .tab-wrapper h2 {
+    text-align: center; }
 
 .tabs {
   display: grid;
