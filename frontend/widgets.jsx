@@ -18,7 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 3,
       title: 'three',
       content: 'Page three'
-    }]
+    }],
+    names: [
+      'Travis',
+      'Jennifer',
+      'James',
+      'Shawna',
+      'Anthony',
+      'Brian',
+      'Cindy',
+      'Chris',
+      'Stephen',
+      'Ryan',
+      'Henry'
+    ]
   };
 
   ReactDOM.render(<Root store={store}/>, document.getElementById('root'));
