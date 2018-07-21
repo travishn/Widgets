@@ -10,17 +10,23 @@ class Autocomplete extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({input: e.currentTarget.value});
+  handleChange(field) {
+    return (e) => this.setState({[field]: e.currentTarget.value});
+  }
+
+  setName(name) {
+    this.setState({input: name});
   }
 
   renderNames() {
     const matches = this.checkMatches();
-    debugger;
     return matches.map(name => {
 
       return (
-        <li>
+        <li 
+          className="list-item"
+          key={`list-item-${name}`}
+          onClick={() => this.setName(name)}>
           {name}
         </li>
       );
@@ -30,16 +36,17 @@ class Autocomplete extends React.Component {
 
   checkMatches() {
     const { names } = this.props.store;
-    return names.filter(name => name.includes(this.state.input));
+    return names.filter(name => name.startsWith(this.state.input));
   }
 
 
   render() {
     return (
       <div className="autocomplete-wrapper">
-        <input onChange={this.handleChange} 
+        <input className="input-field"
+          onChange={this.handleChange('input')} 
           type='text' 
-          placeholder='search' 
+          placeholder='Search...' 
           value={this.state.input}
         />
 
