@@ -214,17 +214,19 @@ h5 {
   border-bottom: 2px solid black;
   border-right: 2px solid black; }
 
-.autocomplete-wrapper {
+.autocomplete-container {
   width: 220px;
   height: 200px;
   margin: 0 auto;
-  margin-top: 30px;
   background: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px 0 15px 0;
   border: 2px solid black; }
+
+.autocomplete-wrapper h2 {
+  padding-top: 30px; }
 
 .input-field {
   margin-bottom: 10px;

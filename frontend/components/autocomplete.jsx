@@ -42,18 +42,21 @@ class Autocomplete extends React.Component {
 
   render() {
     return (
-      <div className="autocomplete-wrapper">
-        <input className="input-field"
-          onChange={this.handleChange('input')} 
-          type='text' 
-          placeholder='Search...' 
-          value={this.state.input}
-        />
+      <section className='autocomplete-wrapper'>
+        <h2>Autocomplete</h2>
+        <div className="autocomplete-container">
+          <input className="input-field"
+            onChange={this.handleChange('input')} 
+            type='text' 
+            placeholder='Search...' 
+            value={this.state.input}
+          />
 
-        <ul className="names-list">
-          {this.renderNames()}
-        </ul>
-      </div>
+          <ul className="names-list">
+            {this.renderNames()}
+          </ul>
+        </div>
+      </section>
     );
   }
 }
