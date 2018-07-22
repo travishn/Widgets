@@ -5,3 +5,4 @@ package-lock.json
 dist
 .eslintrc.js
 .sass-cache
+CLIENT_SECRET.js
