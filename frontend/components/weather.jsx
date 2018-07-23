@@ -43,15 +43,16 @@ class Weather extends React.Component {
   }
 
   render() {
-    return (
-      <section className='weather-wrapper'>
+    return <section className="weather-container">
         <h2>Weather</h2>
-        <div>
-          {this.state.location}
-          {this.state.temperature}
+
+        <div className="weather-wrapper">
+          <div className="weather-info">
+            <h5>{this.state.location}</h5>
+            <h5>{this.state.temperature}&deg;F</h5>
+          </div>
         </div>
-      </section>
-    );
+      </section>;
   }
 }
 

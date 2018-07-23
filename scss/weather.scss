@@ -1,0 +1,26 @@
+.weather-wrapper {
+  font-size: 28px;
+  color: white;
+  font-family: Orbitron;
+  width: 450px;
+  height: 74px;
+  border: 2px solid black;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+  background-color: lightgreen;
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}

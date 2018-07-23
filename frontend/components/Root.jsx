@@ -8,9 +8,9 @@ const Root = ({store}) => {
   return (
     <div className="main-wrapper">
       <Clock />
+      <Weather />
       <Tab store={store}/>
       <Autocomplete store={store}/>
-      <Weather />
     </div>
   );
 };
