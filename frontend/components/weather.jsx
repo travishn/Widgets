@@ -1,6 +1,6 @@
 import React from 'react';
-import { APIKey } from '../../CLIENT_SECRET';
 import axios from 'axios';
+const APIKey = require('../../CLIENT_SECRET');
 
 class Weather extends React.Component {
   constructor(props) {
@@ -15,9 +15,10 @@ class Weather extends React.Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(function (position) {
       let url = "http://api.openweathermap.org/data/2.5/weather?";
-      url += APIKey;
+      url += APIKey.APIKey;
       url += `&lon=${position.coords.longitude}`;
       url += `&lat=${position.coords.latitude}`;
+      debugger;
 
       axios.get(url).then( res => {
         this.setState({temperature: res.main.temp});
