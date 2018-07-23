@@ -9,28 +9,26 @@ class Weather extends React.Component {
       location: '',
       temperature: ''
     };
+
+    this.getInfo = this.getInfo.bind(this);
+  }
+
+  getInfo(location) {
+    let url = "http://api.openweathermap.org/data/2.5/weather?";
+    url += 'APPID=' + APIKey.APIKey;
+    url += `&lat=${location.coords.latitude}`;
+    url += `&lon=${location.coords.longitude}`;
+
+    axios.get(url).then(res => {
+      this.setState( {location: res.data.name} );
+      this.setState({temperature: res.data.main.temp});
+    });
   }
 
   // Would usually hit a frontend route which will hit a backend route which will make the API request
   componentDidMount() {
-    let newLocation = '';
-    let newTemp = '';
-    
-    navigator.geolocation.getCurrentPosition(function (position) {
-      let url = "http://api.openweathermap.org/data/2.5/weather?";
-      url += 'APPID=' + APIKey.APIKey;
-      url += `&lon=${position.coords.longitude}`;
-      url += `&lat=${position.coords.latitude}`;
-
-      axios.get(url).then( res => {
-        newLocation = res.data.name;
-        newTemp = res.data.main.temp;
-        debugger;
-      });
-    });
+    navigator.geolocation.getCurrentPosition(this.getInfo);
   }
-
-
 
   render() {
     return (
