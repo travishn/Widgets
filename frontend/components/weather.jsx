@@ -43,7 +43,8 @@ class Weather extends React.Component {
   }
 
   render() {
-    return <section className="weather-container">
+    if (this.state.temperature !== '') {
+      return <section className="weather-container">
         <h2>Weather</h2>
 
         <div className="weather-wrapper">
@@ -53,6 +54,16 @@ class Weather extends React.Component {
           </div>
         </div>
       </section>;
+    } else {
+      return <section className="weather-container">
+          <h2>Weather</h2>
+
+          <div className="weather-wrapper">
+            <div className="weather-info">
+            </div>
+          </div>
+        </section>;
+    }
   }
 }
 
