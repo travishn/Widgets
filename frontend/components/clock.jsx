@@ -75,13 +75,17 @@ class Clock extends React.Component {
   }
 
   render() {
+    const hour = (this.state.hours % 10) === this.state.hours ? ('0' + this.state.hours) : this.state.hours;
+    const minute = (this.state.minutes % 10) === this.state.minutes ? ('0' + this.state.minutes) : (this.state.minutes.toString());
+    const second = (this.state.seconds % 10) === this.state.seconds ? ('0' + this.state.seconds) : (this.state.seconds.toString());
+
     return (
       <section>
         <h2>Clock</h2>
         <div className="clock-container">
           <div className="clock">
             <h5>Time: </h5>
-            <p>{this.state.hours}:{this.state.minutes}:{this.state.seconds}</p>
+            <p>{hour}:{minute}:{second} PDT</p>
           </div>
 
           <div className="clock">
