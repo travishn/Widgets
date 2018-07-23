@@ -10,6 +10,7 @@ const Root = ({store}) => {
       <Clock />
       <Tab store={store}/>
       <Autocomplete store={store}/>
+      <Weather />
     </div>
   );
 };

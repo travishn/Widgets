@@ -26,11 +26,16 @@ class Weather extends React.Component {
     });
   }
 
+
+
   render() {
     return (
       <section>
+        {this.state.location}
+        {this.state.temperature}
       </section>
     );
   }
 }
 
+export default Weather;
