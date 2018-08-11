@@ -28,7 +28,6 @@ class Weather extends React.Component {
   componentDidMount() {
     // Grabs a location and on success, passes the location object to our getInfo funtion
     // Don't need to bind this.getInfo in our constructor function because we use an arrow function which preserves where this.getInfo was defined initially (which was under the Weather object)
-
     navigator.geolocation.getCurrentPosition(location => {
       return this.getInfo(location);
     });
