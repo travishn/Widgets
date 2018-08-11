@@ -6,5 +6,4 @@ dist
 .eslintrc.js
 .sass-cache
 CLIENT_SECRET.js
-stylesheets
 .DS_Store
